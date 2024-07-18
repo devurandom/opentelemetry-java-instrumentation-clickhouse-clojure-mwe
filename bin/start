@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Aspire.Dashboard 8.0.2 does not support http/protobuf yet:
+export OTEL_EXPORTER_OTLP_PROTOCOL=grpc
+
+exec clj -M:run "$@"
